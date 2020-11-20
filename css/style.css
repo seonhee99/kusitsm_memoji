@@ -10,12 +10,12 @@
 
 	body
 	{
-		/* background: #1d1d1d url(images/overlay.png) repeat; 
+		/* background: #1d1d1d url(images/overlay.png) repeat;
 		수정 : 뭔가 body background,,*/
 		background: #fff;
 		align-items: center;
-		margin-left: 10%;
-		margin-right: 10%;
+		margin-left: 0%;
+		margin-right: 0%;
 
 	}
 
@@ -29,19 +29,19 @@
 	/* h1,h2,h3,h4,h5,h6
 	{
 	} */
-	
+
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 		{
 			color: inherit;
 			text-decoration: none;
 		}
-		
+
 	/* Change this to whatever font weight/color pairing is most suitable */
 	strong, b
 	{
 		color: #000000;
 	}
-	
+
 	em, i
 	{
 		font-style: italic;
@@ -50,41 +50,41 @@
 	/* Don't forget to set this to something that matches the design */
 	a
 	{
-		color: #B0C1E3; 
+		color: #B0C1E3;
 	} /* 수정 : 기본 컬러*/
 
 	a:hover
 	{
 		text-decoration: none;
 	}
-	
+
 	sub
 	{
 		position: relative;
 		top: 0.5em;
 		font-size: 0.8em;
 	}
-	
+
 	sup
 	{
 		position: relative;
 		top: -0.5em;
 		font-size: 0.8em;
 	}
-	
+
 	hr
 	{
 		border: 0;
 		border-top: solid 1px #ddd;
 	}
-	
+
 	blockquote
 	{
 		border-left: solid 0.5em #ddd;
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 	}
-	
+
 	p, ul, ol, dl, table
 	{
 		margin-bottom: 1em;
@@ -92,9 +92,9 @@
 
 	header
 	{
-		margin-bottom: 2em;
+		margin-bottom: 0;
 	}
-	
+
 		header h2
 		{
 			font-size: 2.8em;
@@ -106,7 +106,7 @@
 			margin: 0.5em 0 0 0;
 			padding: 0 0 0.5em 0;
 		}
-		
+
 	footer
 	{
 		margin-top: 1em;
@@ -118,13 +118,13 @@
 	}
 
 	/* Sections/Articles */
-	
+
 		section,
 		article
 		{
 			margin-bottom: 3em;
 		}
-		
+
 		section > :last-child,
 		article > :last-child
 		{
@@ -149,11 +149,12 @@
 		{
 			display: inline-block;
 		}
-		
+
 			.image img
 			{
-				display: block;
 				width: 100%;
+				object-fit: cover;
+				overflow: hidden;
 			}
 
 			.image.featured
@@ -162,23 +163,23 @@
 				width: 100%;
 				margin: 0 0 2em 0;
 			}
-			
+
 			.image.full
 			{
-				display: block;
+				text-align: center;
 				width: 200px;
 				height: 200px;
 				object-fit: cover;
 				overflow: hidden;
-				margin-bottom: 2em;
+				margin-bottom: 1em;
 			}
-			
+
 			.image.left
 			{
 				float: left;
 				margin: 0 2em 2em 0;
 			}
-			
+
 			.image.centered
 			{
 				display: block;
@@ -197,7 +198,7 @@
 		{
 			list-style: none;
 		}
-		
+
 			ul.default li
 			{
 				display: block;
@@ -210,24 +211,24 @@
 			{
 				border-color: rgba(0,0,0,.1);
 			}
-			
+
 			ul.default li:first-child
 			{
 				padding-top: 0;
 				border-top: none;
 			}
-			
-			ul.default a
+
+			/* ul.default a
 			{
 				padding-left: 1em;
-			}
-			
+			} */
+
 			ul.default .fa:before
 			{
 				font-size: 0.80em;
 				color: rgba(255,255,255,.7);
 			}
-			
+
 			ul.default.alt .fa:before
 			{
 				color: rgba(0,0,0,.7);
@@ -235,7 +236,7 @@
 
 
 	/* Buttons */
-		
+
 		.button
 		{
 			position: relative;
@@ -245,7 +246,7 @@
 			color: #707070;
 			cursor: pointer;
 		}
-		
+
 	.divider
 	{
 		overflow: hidden;
@@ -274,7 +275,7 @@ input[type="search"] {
 		/* .fa.solo
 		{
 		} */
-		
+
 			.fa.solo span
 			{
 				display: none;
@@ -698,7 +699,7 @@ input[type="search"] {
 		background : #ffffff
 		/* 수정 : 배경색 흰색 background: #f8efcf; */
 	}
-		
+
 /*********************************************************************************/
 /* Logo                                                                          */
 /*********************************************************************************/
@@ -714,7 +715,7 @@ input[type="search"] {
 	{
 		position: relative;
 	}
-	
+
 		#logo h1
 		{
 			position: absolute;
@@ -722,7 +723,7 @@ input[type="search"] {
 			left: 0;
 			color: #FFF;
 		}
-		
+
 		#logo span
 		{
 			position: absolute;
@@ -731,7 +732,7 @@ input[type="search"] {
 			letter-spacing: 1px;
 			color: rgba(255,255,255,.7);
 		}
-	
+
 		#logo a
 		{
 			display: block;
@@ -748,37 +749,48 @@ input[type="search"] {
 			width: 100%;
 		}
 	}
-	
+
 /* Nav                                                                           */
 /*********************************************************************************/
-
+	#logo-wrapper{
+		display : block;
+		width: 100%;
+	}
 	#nav
 	{
-		padding: 0 1%;
+		height:100%;
+		margin: 0% 15%;
+		padding: 0% 0%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		list-style: none;
-
+		width:80%;
 		letter-spacing: 0.06em;
 		/* background-color: #fff; */
 	}
 		#nav a{
 			text-decoration: none;
 			display: inline-block;
-			padding: 0.8em 1.5em;
+			padding: 0.5em 1.5em;
 		}
-
+		#nav__logo{
+			height:auto;
+			width: 8%;
+		}
 		#nav__menu{
-			margin-left: 2%;
+			margin-left: 5%;
+			margin-bottom: 0%;
+			width: 40%;
 		}
 
 			#nav__menu li {
+				width:24%;
 				display: inline-block;
-				margin-top: 1em;
 			}
-			#nav__menu a {				
-				font-size: 1em;
+			#nav__menu a {
+				font-size: 0.8vw;
+				font-weight: bold;
 				color: #707070;
 				outline: 0;
 			}
@@ -789,13 +801,13 @@ input[type="search"] {
 			}
 
 		#nav__login{
-			margin-left: 53%;
+			margin-left: 40%;
+			width: 6vw;
+			font-size: 1vw;
 			background-color: #B0C1E3;
 			border-radius: 25px;
 		}
-			#nav__login a{
-				color: #fff;
-			}
+			#nav__login a { color: #fff; }
 
 			#nav li.active a
 			{
@@ -805,44 +817,75 @@ input[type="search"] {
 				color: #FFF;
 			}
 
-			/* #nav > ul > li > ul
-			{
-				display: none;
-			} */
-		
+			#nav > ul { display: block; }
+
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
 	/* 수정 : 메인 배너 */
+
 	#banner
 	{
 		background-color: #CED8F6;
 		color: #535f7a;
 		display: block;
-		height: 300px;
-		margin: 0 10px 10px 10px;
-		background-size: cover;	
+		height: 18vw;
+		background-size: cover;
+		width: 100%;
 	}
+		.banner_cls{
+			margin: 0% 20%;
+			height: 18vw;
+			width: 60%;
+		}
+		.banner-text{
+			padding-left: 3%;
+			width: 57%;
+			height: 60%;
+			float:left;
 
-		#banner h1 {
-			height: 100%;
-			margin-bottom: 1%;
-			color: inherit;
-			font-size: 250%;
+		}
+		.banner-logo{
+			margin-left:2%;
+			width: 30%;
+			height: 60%;
+			float:left;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		.banner-logo img{
+			padding: 8%;
+			height:100%;
+			width:100%;
+		}
+
+		#banner h2 {
+			line-height: 120%;
+			width:100%;
+			height: auto;
+			font-size: 2vw;
+			vertical-align: middle;
+			padding-top: 3vw;
 		}
 		#banner p {
+			line-height: 70%;
+			height: auto;
+			width:99%;
 			color: #fff;
-			padding-left: 8px;
-			height: 30px;
-			font-size: 21px;
+			padding-left: 1%;
+			height: 2vw;
+			font-size: 1.5vw;
+			margin:3% 0%;
 		}
 
 		#banner #search {
 			color: #707070;
-			width: 80%;
-			margin: 38px auto;
+			width: 70%;
+			margin: 3% 20%;
 			text-align: center;
 			border-radius: 10%;
+			float:right;
 			/* align-items: center; */
 			/* justify-content: center; */
 		}
@@ -859,23 +902,23 @@ input[type="search"] {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			padding: 10px 80px 10px 20px;
+			padding-left: 3%;
 			border-radius: 50px;
-			font-size: 18px;
+			font-size: 1.3vw;
 			outline: none;
 		}
-		
+
 		#search_btn{
 			position: absolute;
 			top: 0;
 			right: 0;
-			width: 60px;
+			width: 10%;
 			height: 100%;
 			z-index: 1;
 			cursor: pointer;
 			border-radius: 50%;
 		}
-		
+
 		#search_btn .fas{
 			position: absolute;
 			top: 50%;
@@ -896,40 +939,185 @@ input[type="search"] {
 		padding: 3em 10px;
 		background: #fff;
 	}
-	
-	#sidebar1 header h2, 
-	#sidebar2 header h2
+
+	#category{
+		border-bottom : solid 1px rgba(160, 160, 160, 0.3);
+	}
+	#category_nav
 	{
-		font-size: 1.8em;
+		margin: 1% 15%;
+		width: 70%;
+		padding: 0%;
+		justify-content: space-between;
+		align-items: center;
+		list-style: none;
+		letter-spacing: 0.06em;
+
+		/* background-color: #fff; */
+	}
+		#category_nav a{
+			text-decoration: none;
+			display: inline-block;
+			padding: 0.5em 1.5em;
+		}
+		#category__menu{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 0%;
+			width: 90%;
+			margin: 0 5%;
+			height: 100%;
+		}
+
+			#category__menu li {
+				display: inline-block;
+				/* border : solid 1px rgba(160, 160, 160, 0.3); */
+				/* border-right: solid 1px rgba(160, 160, 160, 0.3); */
+			}
+			/* #category__menu li:first-child{
+				border-left: solid 1px rgba(160, 160, 160, 0.3);
+			} */
+			#category__menu a {
+				font-size: 0.8vw;
+				color: #707070;
+				outline: 0;
+			}
+			#category__menu a:hover {
+				color: #fff !important;
+				background-color: #CED8F6;
+				/* border-radius: 25px; */
+			}
+
+	/* competitions */
+	#competitions{
+		display: block;
+		margin: 2% 15%;
+	}
+	#competitions>div{
+		height: 40%;
+	}
+		#competitions .row div{
+			/* justify-content: space-between; */
+			align-content: center;
+			/* text-align: center; */
+			padding: 0 !important;
+			width: 100%;
+		}
+		#competitions ul{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 2% 5%;
+			padding:0;
+		}
+		#competition__menu{
+			display: flex;
+			/* justify-content: space-between; */
+			align-items: center;
+			margin-bottom: 0%;
+			width: 90%;
+			margin: 0%;
+			height: 100%;
+		}
+		#competition__box{
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			/* border: solid 1px #707070a4; */
+		}
+		#competition__box header{
+			font-size: 1.5vw;
+		}
+
+	#title_min header
+	{
+		position: absolute;
+		top: 30%;
+		margin-bottom: 0;
 	}
 
 	#title_min {
+		position: relative;
 		color: #707070;
-		display: block;
+		display: flex;
+		flex-direction: column;
+		height: 60px;
 		width: 100%;
 		font-size: 30px;
 	}
 
+
+	/* Detail */
+	#post{
+		width: 60%;
+		height: 50%;
+		padding: 2vw;
+		margin: 2% 20%;
+		border : solid 1px rgba(160, 160, 160, 0.3);
+		box-shadow: 1vw 1vw 1vw rgba(160, 160, 160, 0.3);
+		border-radius: 3vw;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+		#post_img{
+			height: 15vw;
+			width: 40%;
+			/* max-width: 15vw; */
+			text-align: center;
+		}
+			#post_img img{
+				width: auto;
+				height: 100%;
+			}
+
+		#post_text {
+			width: 55%;
+			height: 20vw;
+			padding: 1vw;
+			display: inline;
+		}
+			#post_text *{
+				margin: 1vw 0;
+			}
+			#post_category a{
+				/* margin */
+				font-size: 0.5vw;
+				color: #707070;
+				text-decoration: none;
+				padding: 0.5vw;
+				border-radius: 1vw;
+				background-color: #CED8F6;
+			}
+			#post_text h1{
+				font-size: 1.5vw;
+				line-height: 2.2vw;
+				color: #707070;
+			}
+
+
 /*********************************************************************************/
 /* Footer                                                                        */
 /*********************************************************************************/
-	
+
 	#footer
 	{
 		position: relative;
 		background: #2c2c2c url(images/overlay.png) repeat;
 		color: rgba(255,255,255,.4);
 	}
-	
+
 	#footer header
 	{
 		color: rgba(255,255,255,.9);
 	}
-	
+
 /*********************************************************************************/
 /* Copyright                                                                     */
 /*********************************************************************************/
-	
+
 	#copyright
 	{
 		position: relative;
@@ -937,10 +1125,10 @@ input[type="search"] {
 		text-align: center;
 		color: rgba(255,255,255,.1);
 	}
-	
+
 
 	#copyright a
 	{
 		text-decoration: none;
 		color: rgba(255,255,255,.3);
-	}			
+	}

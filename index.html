@@ -12,7 +12,7 @@
 		<meta name="keywords" content="" />
 		<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="js/includeHTML.js"></script>
+		
 		<!-- ㄴ추가 -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
@@ -29,46 +29,48 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
 	<body class="homepage">
-
+		<!-- <header include-html="base.html"></header> -->
+		
 	<!-- Header -->
-		<div class="container" id="header">
-			<!-- <div id="logo-wrapper">
-				<div class="container">
-					로고 래퍼 지우기
-					<div id="logo">
-							<h1><a href="#">Memoji</a></h1>
-					</div>					
-				</div>
-			</div>			 -->
-
-			<nav id="nav"><!-- 수정!  -->
+		<div id="logo-wrapper">	
+<!-- 수정!  -->
+			<nav id="nav">
 				<div id="nav__logo">
-					<li class="active"><a href="base.html">Memoji</a></li>
+					<a href="index.html" style="padding: 0;">
+						<img class="profile" src="images/pagename.png" style="width: 100%; object-fit: cover;" >
+					</a>
 				</div>
 				<ul id="nav__menu">
-					<li><a href="category.html">카테고리</a></li>
-					<li><a href="community.html">커뮤니티</a></li>
-					<li><a href="mypage.html">마이페이지</a></li>
+					<li><a href="category.html">공모전</a></li>
+					<li><a href="teamblog.html">팀블로그</a></li>
+					<li><a href="freeboard.html">자유게시판</a></li>
+					<li><a href="event.html">이벤트</a></li>
 
 				</ul>
 
 				<div id="nav__login">
 					<li><a href="Login.html">Login</a></li>
-					<!-- 수정 : 로그인 버튼 우측으로 빼기 -->
+					
 				</div>
 			</nav>
-		</div>
+		</div>		
+		
 	<!-- Header -->
 		
 	<!-- Banner -->
-		<div id="banner" style="padding: 10%">
-				<div class="container">
-					<h1>완벽하게 공부하고 싶을 땐, 족보를 찾아보자</h1>
-					<p>매일 모으는 지식, 매모지 입니다.</p>
+		<div id="banner" style="padding: 0%">
+				<div class="banner_cls">
+					<div class="banner-text">
+						<h2>나의 가치를<br> 올리고 싶은 시간</h2>
+						<p>우리들의 연결고리, 우연입니다</p>
+					</div>
+					<div class="banner-logo">
+						<img class="profile" src="images/logo.png" style="width: 100%; object-fit: fill;" >
+					</div>
 
 					<div id="search">
 						<div id="search_box">
-							<input type="text" class="input" placeholder="검색">
+							<input type="text" class="input" placeholder="찾으시는 공모전이 있나요?">
 							<div id="search_btn">
 								<i class="fas fa-search"></i>
 							</div>
@@ -80,85 +82,73 @@
 	<!-- /Banner -->
 
 	<!-- Main -->
-		<div id="main">
-
-			<!-- Featured -->
-			<div class="container">
-				
-				<div class="row">
-
-					<div id="title_min">
-						<header>정체 모를 소주제 #1</header>
-					</div>
-
-					<section class="3u"> 
-						<a href="#" class="image full"><img src="images/v.jpg" alt=""></a>
-						<p>#1 니 얼굴이 복지다.</p>
-					</section>
-					<section class="3u">
-						<a href="#" class="image full"><img src="images/kino1.jpg" alt=""></a>
-						<p>#2 잘생겼다 키노 </p>
-					</section>
-					<section class="3u">
-						<a href="#" class="image full"><img src="images/kino2.jpg" alt=""></a>
-						<p>#3 또 다시 웹프하면 인간이 아니다</p>
-					</section>
-					<section class="3u">
-						<a href="#" class="image full"><img src="images/kino3.jpg" alt=""></a>
-						<p>#4 이제 끝내줘,,</p>
-					</section>
-				</div>
-			
-			</div>
-			<!-- /Featured -->
-			
-			<!-- Main Content -->
-			<div class="container">
-				<div class="divider"></div>
-				<div class="row">
-
-					<div class="6u">
-						<section>
-							<header>
-								<h2>Welcome to our website</h2>
-							</header>
-							<p>Welcome to<strong> Elemental</strong>, a free responsive HTML5 website template designed by <a href="http://templated.co">TEMPLATED</a>.   It features a neat and clean color combination, a spacious content area, and a large banner area, making it a great design for a corporate/portfolio type of website.  And like all of our templates, it is built on HTML5 and CSS3, has full responsive support for desktops, tablets, and mobile devices, and is 100% free to use personally or commercially under the <a href="http://templated.co/license">Creative Commons Attribution 3.0 license</a>. Be sure to check out our <a href="http://templated.co">website</a> for more awesome free HTML5 templates and follow us on <a href="https://twitter.com/templatedco">Twitter</a> for updates and new releases! Enjoy!</p>
-						</section>
-					</div>
-					<div id="sidebar1" class="3u">
-						<section>
-							<header>
-								<h2>Sidebar #1</h2>
-							</header>
-							<ul class="default alt">
-								<li class="fa fa-angle-right"><a href="#">Vestibulum luctus venenatis dui</a></li>
-								<li class="fa fa-angle-right"><a href="#">Integer rutrum nisl in mi</a></li>
-								<li class="fa fa-angle-right"><a href="#">Etiam malesuada rutrum enim</a></li>
-								<li class="fa fa-angle-right"><a href="#">Aenean elementum facilisis ligula</a></li>
-								<li class="fa fa-angle-right"><a href="#">Ut tincidunt elit vitae augue</a></li>
-							</ul>
-						</section>
-					</div>
-					<div id="sidebar2" class="3u">
-						<section>
-							<header>
-								<h2>Sidebar #2</h2>
-							</header>
-							<ul class="default alt">
-								<li class="fa fa-angle-right"><a href="#">Integer rutrum nisl in mi</a></li>
-								<li class="fa fa-angle-right"><a href="#">Etiam malesuada rutrum enim</a></li>
-								<li class="fa fa-angle-right"><a href="#">Aenean elementum facilisis ligula</a></li>
-								<li class="fa fa-angle-right"><a href="#">Ut tincidunt elit vitae augue</a></li>
-								<li class="fa fa-angle-right"><a href="#">Sed quis odio sagittis leo vehicula</a></li>
-							</ul>
-						</section>
-					</div>
-				</div>
-			
-			</div>
-			<!-- /Main Content -->
-			
+		<div id="category">
+			<nav id="category_nav">
+				<ul id="category__menu">
+					<li><a href="#">전체</a></li>
+					<li><a href="#">기획/아이디어</a></li>
+					<li><a href="#">브랜드/네이밍</a></li>
+					<li><a href="#">광고/마케팅</a></li>
+					<li><a href="#">사진/영상/UCC</a></li>
+					<li><a href="#">디자인</a></li>
+					<li><a href="#">IT/소프트웨어/게임</a></li>
+					<li><a href="#">기타</a></li>
+				</ul>
+			</nav>
 		</div>
+
+		<div id='competitions'>
+			<div id='popular_competition'>
+				<div id="title_min">
+					<header>인기 공모전</header>
+				</div>
+				<!-- 이미지 크기 20  (60+20)-->
+				<ul id='competition__menu' class='row'>
+					<div id='competition__box'>
+						<a href="detail.html" class="image full"><img src="images/v.jpg" alt=""></a>
+						<header>용산공원 네이밍 공모전</header>
+						<p>안녕하세요.</p>
+					</div>
+					<div id='competition__box'>
+						<a href="detail.html" class="image full"><img src="images/kino1.jpg" alt=""></a>
+						<header>용산공원 네이밍 공모전</header>
+						<p>요즘 제일 핫하다는</p>
+					</div>
+					<div id='competition__box'>
+						<a href="detail.html" class="image full"><img src="images/kino2.jpg" alt=""></a>
+						<header>용산공원 네이밍 공모전</header>
+						<p>펜타곤 스트리밍 공모전입니다</p>
+					</div>
+				</ul>
+			</div>
+			<!-- 이미지 크기 15 () -->
+			<div id='teammates'>
+				<div id="title_min">
+					<header>팀원 모집중</header>
+				</div>
+				<!-- 이미지 크기 20  (60+20)-->
+				<ul id='competition__menu' class='row'>
+					<div id='competition__box'>
+						<a href="detail.html" class="image full"><img src="images/v.jpg" alt=""></a>
+						<header>용산공원 네이밍 공모전</header>
+						<p>안녕 쟈기</p>
+					</div>
+					<div id='competition__box'>
+						<a href="detail.html" class="image full"><img src="images/kino1.jpg" alt=""></a>
+						<header>용산공원 네이밍 공모전</header>
+						<p>렛미 쉨댓 부티</p>
+					</div>
+					<div id='competition__box'>
+						<a href="detail.html" class="image full"><img src="images/kino2.jpg" alt=""></a>
+						<header>용산공원 네이밍 공모전</header>
+						<p>아이 갓 댓 </p>
+					</div>
+				</ul>
+			</div>
+		</div>
+
+
+		
 	<!-- /Main -->
 
 	<!-- Footer -->
@@ -170,7 +160,7 @@
 							<header>
 								<h2>Elementum facilisis</h2>
 							</header>
-							<a href="#" class="image full"><img src="images/pics05.jpg" alt=""></a>
+							<a href="detail.html" class="image full"><img src="images/pics05.jpg" alt=""></a>
 							<p>In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Aliquam erat volutpat. Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
 						</section>
 					</div>
